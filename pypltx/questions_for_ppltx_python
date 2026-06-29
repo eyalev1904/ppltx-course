@@ -1,0 +1,378 @@
+"""
+Python Programming Course - Practice Questions
+
+This file contains questions for each chapter. The solutions are in the corresponding
+py_XX_exe.py and py_XX_practice.py files.
+
+Instructions: Try to implement solutions for each question without looking at the solutions.
+Once you're done, compare your implementation with the files mentioned.
+"""
+
+# ============================================================================
+# CHAPTER 1: BASICS AND DATA TYPES
+# ============================================================================
+
+"""
+QUESTION 1.1 (py_01_exe.py - Personal Information Calculator)
+================================================================================
+Create a program that:
+1. Takes user input for: full name, age, height (meters), and weight (kg)
+2. Calculates:
+   - Birth year (assume current year is 2025)
+   - BMI (Body Mass Index) = weight / (height²)
+3. Displays a summary with all information
+4. Classifies BMI into categories:
+   - BMI < 18.5: Underweight
+   - 18.5 ≤ BMI < 24.9: Normal weight
+   - 25 ≤ BMI < 29.9: Overweight
+   - BMI ≥ 30: Obese
+
+Expected Output (example):
+    Personal Information Summary:
+    Name: John Doe
+    Age: 30
+    Birth Year: 1995
+    BMI: 24.50
+    BMI Category: Normal weight
+"""
+
+"""
+QUESTION 1.2 (py_01_practice.py - SQL Queries & Conditionals)
+================================================================================
+Create a program that demonstrates:
+1. String variables with SQL queries:
+   - Create a SELECT * FROM table query
+   - Create a multi-line formatted SQL query using f-strings
+   - Use a variable in the WHERE clause
+
+2. Conditional logic:
+   - Use if-elif-else statements to compare numbers
+   - Classify BMI values (assume BMI = 20) into categories
+
+Example output:
+    SELECT
+        *
+    FROM table
+    WHERE a = False
+
+    1 < 2
+    BMI Category: Normal weight
+"""
+
+
+# ============================================================================
+# CHAPTER 2: CONTROL FLOW
+# ============================================================================
+
+"""
+QUESTION 2.1 (py_02_exe.py - Number Guessing Game)
+================================================================================
+Create an interactive Number Guessing Game that:
+1. Generates a random number between 1-100 (use random.randint())
+2. Allows the user up to 7 attempts to guess the number
+3. Provides feedback for each guess: "Too low!", "Too high!", or success message
+4. Handles invalid input (non-numeric) gracefully
+5. Displays the number of attempts used when the player wins
+6. Shows "Game Over" message when max attempts are exceeded
+
+Features:
+- Use while loops for game logic
+- Use try-except to handle invalid input
+- Track attempts counter
+
+Expected behavior:
+    Welcome to the Number Guessing Game!
+    Guess the number (1-100). Attempts left: 7: 50
+    Too high!
+    [continue guessing...]
+    Congratulations! You guessed the number 42 in 5 attempts!
+"""
+
+"""
+QUESTION 2.2 (py_02_practice.py - Dice Statistics)
+================================================================================
+Create a program that simulates throwing 2 dice 100 times and:
+1. For each throw, generate two random numbers (1-6) representing dice faces
+2. Add both dice values to a total_score counter
+3. Print each throw's counter (showing progress 1-100)
+4. Calculate the average value per throw
+5. Compare with the theoretical average (7.5)
+
+Logic:
+- Use a while loop to perform 100 throws
+- Random values from 1-6 for each die
+- Keep running total of all scores
+- Final calculation: total_score / max_throws
+
+Expected output includes:
+    1
+    2
+    3
+    ... (up to 100)
+    The AVG throw is 7.45
+    Which should be around 7.5
+"""
+
+
+# ============================================================================
+# CHAPTER 3: LOOPS
+# ============================================================================
+
+"""
+QUESTION 3.1 (py_03_exe.py - Prime Number Finder)
+================================================================================
+Create a program that finds all prime numbers in a given range:
+
+1. Get user input for lower and upper bounds
+2. Create a helper function is_prime(n) that:
+   - Returns False if n < 2
+   - Checks divisibility from 2 to sqrt(n)
+   - Returns True if n is prime, False otherwise
+3. Use list comprehension to find all primes in the range
+4. Display the list of prime numbers
+
+Algorithm hint:
+- A prime number is only divisible by 1 and itself
+- Only need to check up to sqrt(n) for divisibility
+
+Example:
+    Enter lower range: 10
+    Enter upper range: 30
+    Prime numbers between 10 and 30:
+    [11, 13, 17, 19, 23, 29]
+"""
+
+
+# ============================================================================
+# CHAPTER 4: DATA STRUCTURES
+# ============================================================================
+
+"""
+QUESTION 4.1 (py_04_exe.py - Student Grade Management System)
+================================================================================
+Create an interactive Student Grade Management System using a dictionary:
+
+Features:
+1. Menu-driven interface with 5 options:
+   - Add Student (name and grade)
+   - View All Students (display all with grades)
+   - Update Grade (modify existing student's grade)
+   - Delete Student (remove from system)
+   - Exit
+
+2. Data Structure:
+   - Use a dictionary: students = {"name": grade}
+
+3. Validation:
+   - Check if student exists before updating/deleting
+   - Handle KeyError appropriately
+
+Expected interaction:
+    1. Add Student
+    2. View All Students
+    3. Update Grade
+    4. Delete Student
+    5. Exit
+
+    Enter your choice (1-5): 1
+    Enter student name: Alice
+    Enter student grade: 95
+
+    Enter your choice (1-5): 2
+    Student Grades:
+    Alice: 95
+"""
+
+
+# ============================================================================
+# CHAPTER 5: FUNCTIONS
+# ============================================================================
+
+"""
+QUESTION 5.1 (py_05_exe.py - Advanced Calculator)
+================================================================================
+Create a multi-operation calculator using functions:
+
+1. Define individual functions for each operation:
+   - add(x, y)
+   - subtract(x, y)
+   - multiply(x, y)
+   - divide(x, y) - handle division by zero
+   - power(x, y)
+
+2. Create a menu-driven interface:
+   - Display all operation options
+   - Let user choose which operation
+   - Get two numbers from user
+   - Perform calculation
+   - Display result
+
+3. Use a dictionary to map choices to functions:
+   operations = {
+       '1': ('Addition', add),
+       '2': ('Subtraction', subtract),
+       ...
+   }
+
+4. Error handling:
+   - Catch ValueError for non-numeric input
+   - Handle division by zero
+
+Expected usage:
+    Advanced Calculator:
+    1. Addition
+    2. Subtraction
+    3. Multiplication
+    4. Division
+    5. Power
+    6. Exit
+
+    Choose operation (1-6): 4
+    Enter first number: 10
+    Enter second number: 2
+    Result: 5.0
+"""
+
+
+# ============================================================================
+# CHAPTER 6: FILE HANDLING
+# ============================================================================
+
+"""
+QUESTION 6.1 (py_06_exe.py - Personal Expense Tracker)
+================================================================================
+Create an Expense Tracker that stores expenses in a CSV file:
+
+1. Use CSV file handling (csv module)
+   - Filename: "expenses.csv"
+
+2. Features with menu options:
+   a) Add Expense:
+      - Get date (YYYY-MM-DD), category, and amount
+      - Append to CSV file
+
+   b) View Expenses:
+      - Read CSV file
+      - Display all expenses in formatted table
+      - Calculate and show total expenses
+
+   c) Exit
+
+3. Error handling:
+   - Handle FileNotFoundError when viewing if file doesn't exist
+   - Handle IOError when writing to file
+   - Show appropriate error messages
+
+4. Data format in CSV:
+   Date, Category, Amount
+   2025-01-15, Groceries, 50.00
+   2025-01-16, Utilities, 100.00
+
+Expected output:
+    Expense Report:
+    Date        Category        Amount
+    2025-01-15  Groceries       $50.00
+    2025-01-16  Utilities       $100.00
+
+    Total Expenses: $150.00
+"""
+
+
+# ============================================================================
+# CHAPTER 7: OBJECT-ORIENTED PROGRAMMING
+# ============================================================================
+
+"""
+QUESTION 7.1 (py_07_exe.py - Library Management System)
+================================================================================
+Create a Library Management System using Object-Oriented Programming:
+
+1. Create a Library class with:
+   - __init__(): Initialize empty books list
+   - add_book(title, author, isbn): Add book to library
+   - display_books(): Show all books with availability status
+   - check_out_book(isbn): Mark book as unavailable
+   - return_book(isbn): Mark book as available
+
+2. Book structure (dictionary):
+   {
+       'title': 'Book Title',
+       'author': 'Author Name',
+       'isbn': '1234567890',
+       'available': True/False
+   }
+
+3. Menu-driven interface:
+   - Display Books
+   - Add Book
+   - Check Out Book (by ISBN)
+   - Return Book (by ISBN)
+   - Exit
+
+4. Functionality:
+   - Prevent checking out unavailable books
+   - Prevent returning books that aren't checked out
+   - Show appropriate messages
+
+5. Initialize with sample books:
+   - "Python Basics" by "John Smith" ISBN "1234567890"
+   - "Advanced Python" by "Jane Doe" ISBN "0987654321"
+
+Expected interaction:
+    Library Management System
+    1. Display Books
+    2. Add Book
+    3. Check Out Book
+    4. Return Book
+    5. Exit
+
+    Enter your choice (1-5): 1
+    Title: Python Basics, Author: John Smith, ISBN: 1234567890, Status: Available
+    Title: Advanced Python, Author: Jane Doe, ISBN: 0987654321, Status: Available
+
+    Enter your choice (1-5): 3
+    Enter book ISBN to check out: 1234567890
+    Book 'Python Basics' checked out successfully!
+"""
+
+"""
+QUESTION 7.2 (py_07_practice.py - OOP Practice)
+================================================================================
+Note: This file is currently empty.
+
+Challenge yourself to create a new OOP exercise that builds on what you learned!
+Ideas:
+- A Bank Account system with deposits/withdrawals
+- A Task Manager with priority levels
+- A Pet adoption system with different animal types
+- A Shopping Cart system with products and prices
+"""
+
+
+# ============================================================================
+# HOW TO USE THIS QUESTION FILE
+# ============================================================================
+
+"""
+RECOMMENDED WORKFLOW:
+1. Read each question carefully
+2. Don't look at the solution file yet!
+3. Implement your solution in a new file
+4. Test your implementation
+5. Compare with the corresponding py_XX_exe.py or py_XX_practice.py file
+6. Note any differences and learn from them
+7. Run the solution files to see the expected behavior
+
+TESTING YOUR ANSWERS:
+- Try to run your code and verify the output
+- Pay attention to error messages
+- Test edge cases (empty input, invalid values, etc.)
+
+PROGRESSION:
+- Chapters 1-2: Variables, data types, and basic control flow
+- Chapters 3-4: Loops and data structures (lists, dictionaries)
+- Chapters 5-6: Functions and file handling
+- Chapter 7: Object-oriented programming (classes and objects)
+
+Good luck! These exercises build from simple to complex concepts.
+"""
