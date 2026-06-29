@@ -335,18 +335,6 @@ Expected interaction:
     Book 'Python Basics' checked out successfully!
 """
 
-"""
-QUESTION 7.2 (py_07_practice.py - OOP Practice)
-================================================================================
-Note: This file is currently empty.
-
-Challenge yourself to create a new OOP exercise that builds on what you learned!
-Ideas:
-- A Bank Account system with deposits/withdrawals
-- A Task Manager with priority levels
-- A Pet adoption system with different animal types
-- A Shopping Cart system with products and prices
-"""
 
 
 # ============================================================================
